@@ -216,6 +216,7 @@ footer {
 }
 
 /* ----------------- Media Querys ---------------------- */
+/* ------------------- Tablets ------------------------- */
 
 @media (min-width: 601px) and (max-width: 900px) {
     .menu-icon {
@@ -258,6 +259,8 @@ footer {
         transition: transform 1s;
     }
 }
+
+/* ----------------- Celulares ---------------------- */
 
 @media (max-width: 600px) {
 

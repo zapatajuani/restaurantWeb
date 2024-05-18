@@ -9,7 +9,9 @@ let numero = document.getElementById("numero")
 let piso = document.getElementById("piso")
 
 let errorSign = document.getElementById("error-sign")
+let errorList = document.getElementById("error-list")
 
+/* ----------------------------------------------------------------- */
 
 rbtnDelivery.addEventListener("click", (e) => {
     if (e.target.checked) {
@@ -38,15 +40,20 @@ rbtnTakeaway.addEventListener("click", (e) => {
 /* ------ Carga de formulario ------- */
 
 document.querySelector("#form-paga").addEventListener("submit", (e) => {
-    if ((!calle.value || !numero.value || !piso.value) && !rbtnTakeaway.checked) {
-        e.preventDefault()
+    e.preventDefault()
+
+    if (Object.keys(carritoDicc).length === 0) {
+
+        if (errorList.classList.contains("hide")) {
+            errorList.classList.toggle("hide")
+        }
+    } else if ((!calle.value || !numero.value || !piso.value) && !rbtnTakeaway.checked) {
 
         if (errorSign.classList.contains("hide")) {
             errorSign.classList.toggle("hide")
         }
     } else {
-        e.preventDefault()
-        console.log("Formulario enviado")
+        
         sessionStorage.clear()
         window.location.href = "./compraExitosa.html"
         /* Envio al backend */
