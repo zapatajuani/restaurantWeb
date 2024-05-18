@@ -1,0 +1,7 @@
+.about-us {
+    flex-grow: 1;
+    margin: 20px;
+    width: 40%;
+    text-align: justify;
+    font-size: 25px;
+}
