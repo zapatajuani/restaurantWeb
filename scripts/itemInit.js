@@ -13,28 +13,20 @@ let isInCart = false
 /* ---------------------- */
 
 function recoverData (id) {
-
     let carrito = JSON.parse(sessionStorage.getItem('carrito'))
 
-    if (carrito[id]) {
+    imagen.src = dicc[id].img
+    titulo.innerHTML = dicc[id].name
+    desc.innerHTML = dicc[id].desc
+    precio.innerHTML = formatearPrecio(dicc[id].price)
 
-        imagen.src = dicc[id].img
-        titulo.innerHTML = dicc[id].name
-        desc.innerHTML = dicc[id].desc
-    
-        precio.innerHTML = formatearPrecio(dicc[id].price)
+    if (carrito[id]) {
         cantidad.innerHTML = carrito[id].quantity
         total.innerHTML = formatearPrecio(carrito[id].total)
         botonAdd.innerHTML = `MODIFICAR (${formatearPrecio(carrito[id].total)})`
 
         isInCart = true
-
     } else {
-        imagen.src = dicc[id].img
-        titulo.innerHTML = dicc[id].name
-        desc.innerHTML = dicc[id].desc
-    
-        precio.innerHTML = formatearPrecio(dicc[id].price)
         total.innerHTML = formatearPrecio(dicc[id].price)
         botonAdd.innerHTML = `AGREGAR (${formatearPrecio(dicc[id].price)})`
     }

@@ -217,10 +217,10 @@ footer {
 
 /* ----------------- Media Querys ---------------------- */
 
-@media screen and (max-width:768px) {
+@media (min-width: 601px) and (max-width: 900px) {
     .menu-icon {
         position: absolute;
-        left: 720px;
+        left: 740px;
         font-size: 35px;
         display: block;
     }
@@ -231,7 +231,7 @@ footer {
     }
     
     .item {
-        width: 700px;
+        width: 550px;
     }
 
     .navbar {
@@ -259,15 +259,14 @@ footer {
     }
 }
 
-@media screen and (max-width:412px) {
+@media (max-width: 600px) {
 
     .menu-icon {
         position: absolute;
-        left: 364px;
+        left: 350px;
         font-size: 35px;
         display: block;
     }
-
 
     .navbar {
         display: block;
