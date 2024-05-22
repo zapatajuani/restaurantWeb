@@ -34,3 +34,33 @@
 .dia {
     margin-right: auto;
 }
+
+/* ------------------- Tablets ------------------------- */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .horarios {
+        font-size: 15px;
+    }
+}
+
+/* ----------------- Celulares ---------------------- */
+
+@media (max-width: 600px) {
+    .horarios {
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .horarios div {
+        width: 85%;
+
+        margin: 20px 10px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-direction: row;
+    }
+
+}

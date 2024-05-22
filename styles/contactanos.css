@@ -97,3 +97,20 @@ button:hover {
     height: 1px;
     overflow: hidden;
 }
+
+
+/* ------------------- Tablets ------------------------- */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .contactanos {
+        width: 80%;
+    }
+}
+
+/* ----------------- Celulares ---------------------- */
+
+@media (max-width: 600px) {
+    .contactanos {
+        width: 80%;
+    }
+}

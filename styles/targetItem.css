@@ -2,7 +2,6 @@
     font-size: 25px;
 }
 
-
 body {
     display: flex;
     justify-content: center;
@@ -73,6 +72,8 @@ button {
     background-color: #7AEA94;
 }
 
+/* ---------- Hover ------------- */
+
 .action:hover {
     background-color: #D7E8DA;
     transition: background-color 0.3s ease;
@@ -88,3 +89,49 @@ button {
     transition: background-color 0.3s ease;
 }
 
+
+/* -------------- Tablets -------------- */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .item-container {
+        margin: 20px 0px 20px 0px;
+        width: 500px;
+    }
+
+    .selected-item-price {
+        margin-left: 55%;
+    }
+
+    .selected-item-img,
+    .button-area,
+    .add,
+    .volver {
+        width: 80%;
+    }
+}
+
+/* ------------- Celulares -------------- */
+
+@media (max-width: 600px) {
+
+    .item-container {
+        width: 400px;
+        gap: 25px;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .selected-item-price {
+        margin-left: 55%;
+    }
+
+    .total {
+        display: none;
+    }
+
+    .selected-item-img,
+    .button-area,
+    .add,
+    .volver {
+        width: 80%;
+    }
+}
