@@ -246,6 +246,10 @@ footer {
         display: block;
     }
 
+    .nav-link::after {
+        display: none;
+    }
+
     .main {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -260,9 +264,10 @@ footer {
         position: absolute;
         width: 100vw;
         top: 80px;
-        left: 1000px;
+        right: 1000px;
         background-color: var(--secondary-color);
-        transition: transform 1s;
+        
+        transition: transform 1s linear;
     }
 
     .nav-list {
@@ -279,8 +284,7 @@ footer {
     }
 
     .show {
-        transform: translateX(-1000px);
-        transition: transform 1s;
+        transform: translateX(1000px);
     }
 }
 
@@ -295,12 +299,16 @@ footer {
         display: block;
     }
 
+    .nav-link::after {
+        display: none;
+    }
+
     .navbar {
         display: block;
         position: absolute;
         width: 100vw;
         top: 80px;
-        left: 800px;
+        right: 1000px;
         background-color: var(--secondary-color);
         transition: transform 1s;
     }
@@ -318,8 +326,7 @@ footer {
     }
 
     .show {
-        transform: translateX(-800px);
-        transition: transform 1s;
+        transform: translateX(1000px);
     }
 
 
